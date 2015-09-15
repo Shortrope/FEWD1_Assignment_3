@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 8</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+   
+    <h1>Quien Es Mas Macho?</h1>
+    <input type="button" id="zak" value="ZAK">
+    <input type="button" id="carey" value="CAREY">
+    
+    
+    <div class="flip-container">
+        <div id="flipper">
+            <div id="coinZak" class="front">
+                <img src="images/zak.jpg" alt="zak">
+            </div>
+            <div id="coinCarey" class="back">
+                <img src="images/carey.jpg" alt="carey">
+            </div>
+            
+        </div><!-- .flipper -->
+    </div><!--.flip-container-->
+
+    
+    <h2 id="winner" class="winner-hidden"></h2>
+    <p>refresh to play agian</p>
+    
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="scripts/newCoinFlip.js"></script>
+</body>
+
+</html>

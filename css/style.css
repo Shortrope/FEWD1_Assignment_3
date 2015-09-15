@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+    width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 16px;
+    padding: 40px;
+}
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 40px;
+}
+p {
+    font-size: 0.7em;
+    color: #555;
+}
+input {
+    width: 100px;
+    height: 50px;
+}
+
+
+.flip-container {
+/*
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+*/
+    margin: 50px auto;
+}
+
+#flipper.flip {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.flip-container, #flipper, .front, .back, img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px
+}
+
+#flipper {
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-transform-style: preserve-3d;
+/*    transform-style: preserve-3d;*/
+    position: relative;
+}
+.back, .front {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px dotted gray;
+}
+.front {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.spin {
+    -webkit-animation: spinner 0.25s 7;
+    animation: spinner 0.25s 7;
+}
+.spin-slow {
+    -webkit-animation: spinner 4s infinite;
+    animation: spinner 4s infinite;
+}
+@keyframes spinner {
+    0%    {transform: rotateX(0deg);}
+    50%    {transform: rotateX(180deg);}
+    100%    {transform: rotateX(0deg);}
+}
+
+.winner-hidden {
+    color: #fff;
+    transition: color 1.5s 1.75s;
+}
+.winner-visible {
+    color: #000;
+}
+
+
